@@ -3,11 +3,12 @@ let scl = 20;
 let w = 1400, h = 1000;
 let flyingX = 0, flyingY = 0;
 let terrain = [];
-let img;
+let img, fishImg;
 
 function preload()
 {
   img = loadImage("https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/6.png");
+  fishImg = loadImage("https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/8.png");
 }
 
 function setup()
@@ -54,7 +55,7 @@ function draw()
   }
   
   push();
-  translate(0, 0);
+  translate(0, 70);
   rotateX(PI / 3);
   stroke(141, 128, 96);
   fill(161, 148, 116);
@@ -89,5 +90,12 @@ function draw()
   translate(0, 0, 300);
   fill(112, 146, 190);
   torus(190, 70);
+  pop();
+  
+  push();
+  noStroke();
+  texture(fishImg);
+  translate(mouseX - 300, mouseY - 300, 0);
+  sphere(50, 50);
   pop();
 }
