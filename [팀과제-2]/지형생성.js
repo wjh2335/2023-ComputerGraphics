@@ -8,7 +8,7 @@ let img, fishImg;
 function preload()
 {
   img = loadImage("https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/6.png");
-  fishImg = loadImage("https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/8.png");
+  fishImg = loadImage("https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/10.png");
 }
 
 function setup()
