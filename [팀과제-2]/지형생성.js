@@ -75,27 +75,27 @@ function draw()
   push();
   translate(0, 0, 300);
   fill(150);
-  torus(100, 10);
+  torus(130, 10);
   pop();
   
   push();
   noStroke();
   translate(0, 0, 313.2);
   fill(150);
-  torus(94, 9.5);
+  torus(122.2, 9.4);
   pop();
   
   push();
   noStroke();
   translate(0, 0, 300);
   fill(112, 146, 190);
-  torus(190, 70);
+  torus(200, 50);
   pop();
   
   push();
   noStroke();
   texture(fishImg);
   translate(mouseX - 300, mouseY - 300, 0);
-  sphere(100, 100);
+  sphere(50, 50);
   pop();
 }
