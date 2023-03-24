@@ -37,18 +37,10 @@ function draw()
   plane(1000, 1000);
   pop();
 
-  if (keyIsDown(LEFT_ARROW)) {
-    flyingX -= 0.1;
-  }
-  if (keyIsDown(RIGHT_ARROW)) {
-    flyingX += 0.1;
-  }
-  if (keyIsDown(UP_ARROW)) {
-    flyingY -= 0.1;
-  }
-  if (keyIsDown(DOWN_ARROW)) {
-    flyingY += 0.1;
-  }
+  if (keyIsDown(LEFT_ARROW)) { flyingX -= 0.1; }
+  if (keyIsDown(RIGHT_ARROW)) { flyingX += 0.1; }
+  if (keyIsDown(UP_ARROW)) { flyingY -= 0.1; }
+  if (keyIsDown(DOWN_ARROW)) { flyingY += 0.1; }
 
   var xoff = flyingX, yoff = flyingY;
 
@@ -66,8 +58,6 @@ function draw()
   push();
   translate(0, 70);
   rotateX(PI / 3);
-  stroke(141, 128, 96);
-  fill(161, 148, 116);
   translate(-w / 2, -h / 2);
   for (let y = 0; y < rows - 1; y++)
   {
