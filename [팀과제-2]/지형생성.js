@@ -96,6 +96,6 @@ function draw()
   noStroke();
   texture(fishImg);
   translate(mouseX - 300, mouseY - 300, 0);
-  sphere(50, 50);
+  sphere(100, 100);
   pop();
 }
