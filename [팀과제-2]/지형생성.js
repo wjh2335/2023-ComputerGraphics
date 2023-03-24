@@ -56,8 +56,8 @@ function draw()
   push();
   translate(0, 0);
   rotateX(PI / 3);
-  stroke(161, 148, 116);
-  fill(211, 198, 166);
+  stroke(141, 128, 96);
+  fill(161, 148, 116);
   translate(-w / 2, -h / 2);
   for (let y = 0; y < rows - 1; y++)
   {
@@ -72,9 +72,22 @@ function draw()
   pop();
   
   push();
-  noStroke();
-  translate(0, -0, 300);
+  translate(0, 0, 300);
   fill(150);
-  torus(150, 50);
+  torus(100, 10);
+  pop();
+  
+  push();
+  noStroke();
+  translate(0, 0, 313.2);
+  fill(150);
+  torus(94, 9.5);
+  pop();
+  
+  push();
+  noStroke();
+  translate(0, 0, 300);
+  fill(112, 146, 190);
+  torus(190, 70);
   pop();
 }
