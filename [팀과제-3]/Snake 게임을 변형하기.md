@@ -160,9 +160,7 @@ function draw()
   s.update();
   s.show();
  
-  //fill(foodColor);
   rabbit(foodColor);
-  //rect(food.x, food.y, scl, scl);
 }
 
 function pickLocation()
