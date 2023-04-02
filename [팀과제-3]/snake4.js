@@ -4,6 +4,7 @@ let food;
 let img;
 let isGameOver = false;
 let foodColor;
+let high = 1;
 playfield = 600;
 
 function preload()
@@ -74,7 +75,7 @@ function scoreboard()
   text("Score: ", 10, 625);
   text("Highscore: ", 450, 625);
   text(s.score, 70, 625);
-  text(s.highscore, 540, 625);
+  text(high, 540, 625);
 }
 
 function keyPressed()
@@ -100,7 +101,6 @@ function Snake()
   this.total = 0;
   this.tail = [];
   this.score = 1;
-  this.highscore = 1;
   this.headColor = color(255);
  
   this.dir = function(x,y)
@@ -119,9 +119,9 @@ function Snake()
       this.score++;
       text(this.score, 70, 625);
       
-      if (this.score > this.highscore) this.highscore = this.score;
+      if (this.score > high) high = this.score;
       
-      text(this.highscore, 540, 625);
+      text(high, 540, 625);
       this.headColor = foodColor;
       return true;
     }
