@@ -362,8 +362,16 @@ function rabbit(col)
 
 [![Video Label](http://img.youtube.com/vi/Lq7Ga9_VhbA/0.jpg)](https://youtu.be/Lq7Ga9_VhbA)
 
-## 5. 참고 자료
+## 5. 향후 계획
 
-### 5-1. 링크
+![20](/img/20.png)
+```
+위 사진과 같이 장애물이 나오고,
+장애물에 닿으면 게임이 종료 되도록 게임을 만들어 볼 기회가 생긴다면 좋겠습니다.
+```
+
+## 6. 참고 자료
+
+### 6-1. 링크
 
 [newgraphics 네이버 카페 : 6강 Snake 게임, 영화와 Graphics](https://cafe.naver.com/newgraphics/152)
