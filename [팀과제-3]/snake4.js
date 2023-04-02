@@ -24,9 +24,9 @@ function draw()
 {
   background(img);
   scoreboard();
-  
+
   if(s.eat(food)) pickLocation();
-  
+
   s.death();
   if (isGameOver)
   {
@@ -42,7 +42,8 @@ function draw()
   }
   s.update();
   s.show();
- 
+
+  translate(food.x - 10, food.y - 10);
   rabbit(foodColor);
 }
 
@@ -100,17 +101,17 @@ function Snake()
   this.tail = [];
   this.score = 1;
   this.headColor = color(255);
- 
+
   this.dir = function(x,y)
   {
     this.xspeed = x;
     this.yspeed = y;
   }
- 
+
   this.eat = function(pos)
   {
     let d = dist(this.x, this.y, pos.x, pos.y);
-    
+
     if (d < 1)
     {
       this.total++;
@@ -125,14 +126,14 @@ function Snake()
     }
     else return false;
   }
- 
+
   this.death = function()
   {
     for (let i = 0; i < this.tail.length; i++)
     {
       let pos = this.tail[i];
       let d = dist(this.x, this.y, pos.x, pos.y);
-      
+
       if (d < 1)
       {
         this.total = 0;
@@ -143,7 +144,7 @@ function Snake()
       }
     }
   }
- 
+
   this.update = function()
   {
     if (this.total === this.tail.length)
@@ -154,136 +155,39 @@ function Snake()
 
     this.x = this.x + this.xspeed*scl;
     this.y = this.y + this.yspeed*scl;
-    
+
     this.x = constrain(this.x, 0, playfield-scl);
     this.y = constrain(this.y, 0, playfield-scl);
   }
+
   this.show = function()
   {
-    fill(this.headColor);
     for (let i = 0; i < this.tail.length; i++)
     {
-        //rect(this.tail[i].x, this.tail[i].y, scl, scl);
       push();
-    
-    if(s.xspeed == 0 && s.yspeed == 1) { translate(this.tail[i].x - 10, this.tail[i].y - 10);  }
-    else if(s.xspeed == 0 && s.yspeed == -1) { translate(this.tail[i].x - 10, this.tail[i].y - 10);  }
-    else if(s.xspeed == 1 && s.yspeed == 0) { translate(this.tail[i].x - 10, this.tail[i].y - 10);  }
-    else if(s.xspeed == -1 && s.yspeed == 0) { translate(this.tail[i].x - 10, this.tail[i].y - 10);  }
-    scale(0.1);
-    fill(this.headColor);
-    strokeWeight(3);
-    
-    //귀
-    push(); //왼쪽 귀
-    translate(150, 115);
-    rotate(radians(-10));
-    ellipse(0, 0, 50, 100);
-    pop();
-    push(); //오른쪽 귀
-    translate(250, 115);
-    rotate(radians(10));
-    ellipse(0, 0, 50, 100);
-    pop();
-  
-    //귀 내부
-    fill(255, 180, 180);
-    push(); //왼쪽 귀 내부
-    translate(150, 112);
-    rotate(radians(-10));
-    ellipse(0, 0, 30, 65);
-    pop();
-    push(); //오른쪽 귀 내부
-    translate(250, 112);
-    rotate(radians(10));
-    ellipse(0, 0, 30, 65);
-    pop();
-  
-    //얼굴
-    fill(this.headColor);
-    ellipse(200, 200, 180, 170);
-  
-    //눈
-    fill(0);
-    ellipse(160, 195, 10, 10); //왼쪽 눈
-    ellipse(240, 195, 10, 10); //오른쪽 눈
-
-    //코
-    ellipse(200, 210, 15, 15);
-  
-    //입
-    fill(this.headColor);
-    line(200, 220, 200, 225); //인중
-    arc(190, 225, 20, 20, 0, PI); //왼쪽 입
-    arc(210, 225, 20, 20, 0, PI); //오른쪽 입
-  
-    pop();
+      if(s.xspeed == 0 && s.yspeed == 1) { translate(this.tail[i].x - 10, this.tail[i].y - 10); }
+      else if(s.xspeed == 0 && s.yspeed == -1) { translate(this.tail[i].x - 10, this.tail[i].y - 10); }
+      else if(s.xspeed == 1 && s.yspeed == 0) { translate(this.tail[i].x - 10, this.tail[i].y - 10); }
+      else if(s.xspeed == -1 && s.yspeed == 0) { translate(this.tail[i].x - 10, this.tail[i].y - 10); }
+      rabbit(this.headColor);
+      pop();
     }
-    //rect(this.x, this.y, scl, scl);
-    
+
     push();
-    
     if(s.xspeed == 0 && s.yspeed == 1) { translate(this.x + 30, this.y + 30); rotate(radians(180)); }
     else if(s.xspeed == 0 && s.yspeed == -1) { translate(this.x - 10, this.y - 10); rotate(radians(0)); }
     else if(s.xspeed == 1 && s.yspeed == 0) { translate(this.x + 30, this.y - 10); rotate(radians(90)); }
     else if(s.xspeed == -1 && s.yspeed == 0) { translate(this.x - 10, this.y + 30); rotate(radians(270)); }
-    scale(0.1);
-    fill(this.headColor);
-    strokeWeight(3);
-    
-    //귀
-    push(); //왼쪽 귀
-    translate(150, 115);
-    rotate(radians(-10));
-    ellipse(0, 0, 50, 100);
-    pop();
-    push(); //오른쪽 귀
-    translate(250, 115);
-    rotate(radians(10));
-    ellipse(0, 0, 50, 100);
-    pop();
-  
-    //귀 내부
-    fill(255, 180, 180);
-    push(); //왼쪽 귀 내부
-    translate(150, 112);
-    rotate(radians(-10));
-    ellipse(0, 0, 30, 65);
-    pop();
-    push(); //오른쪽 귀 내부
-    translate(250, 112);
-    rotate(radians(10));
-    ellipse(0, 0, 30, 65);
-    pop();
-  
-    //얼굴
-    fill(this.headColor);
-    ellipse(200, 200, 180, 170);
-  
-    //눈
-    fill(0);
-    ellipse(160, 195, 10, 10); //왼쪽 눈
-    ellipse(240, 195, 10, 10); //오른쪽 눈
-
-    //코
-    ellipse(200, 210, 15, 15);
-  
-    //입
-    fill(this.headColor);
-    line(200, 220, 200, 225); //인중
-    arc(190, 225, 20, 20, 0, PI); //왼쪽 입
-    arc(210, 225, 20, 20, 0, PI); //오른쪽 입
-  
+    rabbit(this.headColor);
     pop();
   }
 }
 
-function rabbit()
+function rabbit(col)
 {
-  translate(food.x - 10, food.y - 10);
   push();
   scale(0.1);
-  fill(foodColor);
+  fill(col);
   strokeWeight(3);
   
   //귀
@@ -312,7 +216,7 @@ function rabbit()
   pop();
   
   //얼굴
-  fill(foodColor);
+  fill(col);
   ellipse(200, 200, 180, 170);
   
   //눈
@@ -324,10 +228,9 @@ function rabbit()
   ellipse(200, 210, 15, 15);
   
   //입
-  fill(foodColor);
+  fill(col);
   line(200, 220, 200, 225); //인중
   arc(190, 225, 20, 20, 0, PI); //왼쪽 입
   arc(210, 225, 20, 20, 0, PI); //오른쪽 입
-  
   pop();
 }
