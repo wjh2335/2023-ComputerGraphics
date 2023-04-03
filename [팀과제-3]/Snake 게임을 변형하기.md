@@ -148,7 +148,7 @@ to-do
 
 
 
-### 4. 코드 💻 [링크](https://github.com/wjh2335/2023-ComputerGraphics/blob/main/%5B%ED%8C%80%EA%B3%BC%EC%A0%9C-3%5D/snake4.js)
+## 4. 코드 💻 [링크](https://github.com/wjh2335/2023-ComputerGraphics/blob/main/%5B%ED%8C%80%EA%B3%BC%EC%A0%9C-3%5D/snake4.js)
 
 ```js
 let s;
@@ -391,7 +391,7 @@ function rabbit(col)
 
 
 
-### 5. 실행 결과 🎮
+## 5. 실행 결과 🎮
 
 ![19](/img/19.png)
 
