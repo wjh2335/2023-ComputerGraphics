@@ -1,0 +1,235 @@
+// 23-04-04
+// 장애물 생성 및 위치 등의 오류를 해결한 code
+/*
+  snake ver.5 
+  1) game over
+  2) restart
+  3) createObstacle
+  4) obstacle check
+*/
+
+//Delcare Global Variables
+let s;
+let scl = 20;
+let food;
+let isGameOver = false;
+let obstacles = [];
+playfield = 600;
+
+// p5js Setup function - required
+function setup() {
+  createCanvas(playfield, 640);
+  background(51);
+  s = new Snake();
+  frameRate(10);
+  pickLocation();
+  createObstacle();
+  drawObstacles();
+}
+
+// p5js Draw function - required
+function draw() {
+  background(51);
+  scoreboard();
+
+  if (s.eat(food)) {
+    pickLocation();
+    createObstacle();
+  }
+
+  s.death();
+  if (isGameOver) {
+    fill(255);
+    textSize(50);
+    textAlign(CENTER);
+    textFont("Georgia");
+    text("GAME OVER!", width / 2, height / 2);
+    textSize(20);
+    fill(0, 255, 20);
+    text("Press spacebar to restart!!!", width / 2, height / 2 + 40);
+    return;
+  }
+
+  s.update();
+  s.show();
+  fill(255, 0, 100);
+  rect(food.x, food.y, scl, scl);
+  // scoreboard();
+  drawObstacles();
+}
+
+function createObstacle() {
+  let cols = floor(playfield / scl);
+  let rows = floor(playfield / scl);
+  let obstacle = createVector(floor(random(cols)), floor(random(rows)));
+  obstacle.mult(scl);
+
+  // Check the obstacle isn't appearing inside the tail or food
+  let overlap = false;
+  for (let i = 0; i < s.tail.length; i++) {
+    let pos = s.tail[i];
+    let d = dist(obstacle.x, obstacle.y, pos.x, pos.y);
+    if (d < 1) {
+      overlap = true;
+      break;
+    }
+  }
+  let d = dist(obstacle.x, obstacle.y, food.x, food.y);
+  if (d < 1) {
+    overlap = true;
+  }
+
+  // Check the obstacle isn't appearing inside another obstacle
+  // 장애물 좌표 중복 체크
+  for (let i = 0; i < obstacles.length; i++) {
+    let pos = obstacles[i];
+    let d = dist(obstacle.x, obstacle.y, pos.x, pos.y);
+    if (d < 1) {
+      overlap = true;
+      break;
+    }
+  }
+
+  if (!overlap) {
+    obstacles.push(obstacle);
+  }
+}
+
+function drawObstacles() {
+  fill(0, 255, 0);
+  for (let i = 0; i < obstacles.length; i++) {
+    rect(obstacles[i].x, obstacles[i].y, scl, scl);
+  }
+}
+
+// Pick a location for food to appear
+function pickLocation() {
+  let cols = floor(playfield / scl);
+  let rows = floor(playfield / scl);
+  food = createVector(floor(random(cols)), floor(random(rows)));
+  food.mult(scl);
+
+  // Check the food isn't appearing inside the tail
+  for (let i = 0; i < s.tail.length; i++) {
+    let pos = s.tail[i];
+    let d = dist(food.x, food.y, pos.x, pos.y);
+    if (d < 1) {
+      pickLocation();
+    }
+  }
+}
+
+// scoreboard
+function scoreboard() {
+  fill(0);
+  rect(0, 600, 600, 40);
+  fill(255);
+  textFont("Georgia");
+  textSize(18);
+  textAlign(LEFT);
+  text("Score: ", 10, 625);
+  text("Highscore: ", 450, 625);
+  text(s.score, 70, 625);
+  text(s.highscore, 540, 625);
+}
+
+// CONTROLS function
+function keyPressed() {
+  if (keyCode === UP_ARROW) {
+    s.dir(0, -1);
+  } else if (keyCode === DOWN_ARROW) {
+    s.dir(0, 1);
+  } else if (keyCode === RIGHT_ARROW) {
+    s.dir(1, 0);
+  } else if (keyCode === LEFT_ARROW) {
+    s.dir(-1, 0);
+  } else if (keyCode === 32 && isGameOver) {
+    // 스페이스바를 누르면 게임 다시 시작
+    isGameOver = false;
+    s = new Snake();
+    pickLocation();
+    createObstacle();
+  }
+}
+
+// SNAKE OBJECT
+function Snake() {
+  this.x = 0;
+  this.y = 0;
+  this.xspeed = 1;
+  this.yspeed = 0;
+  this.total = 0;
+  this.tail = [];
+  this.score = 1;
+  this.highscore = 1;
+  this.obstacles = obstacles;
+
+  this.dir = function (x, y) {
+    this.xspeed = x;
+    this.yspeed = y;
+  };
+
+  this.eat = function (pos) {
+    var d = dist(this.x, this.y, pos.x, pos.y);
+    if (d < 1) {
+      this.total++;
+      this.score++;
+      text(this.score, 70, 625);
+      if (this.score > this.highscore) {
+        this.highscore = this.score;
+      }
+      text(this.highscore, 540, 625);
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  this.death = function () {
+    for (let i = 0; i < this.tail.length; i++) {
+      let pos = this.tail[i];
+      let d = dist(this.x, this.y, pos.x, pos.y);
+      if (d < 1) {
+        this.total = 0;
+        this.score = 0;
+        this.tail = [];
+        obstacles = [];  // 벽에 부딪힐 때 장애물 초기화
+        isGameOver = true;
+      }
+    }
+    for (let i = 0; i < obstacles.length; i++) {
+      let d = dist(this.x, this.y, obstacles[i].x, obstacles[i].y);
+      if (d < 1) {
+        this.total = 0;
+        this.score = 0;
+        this.tail = [];
+        obstacles = [];
+        isGameOver = true;
+        return;
+      }
+    }
+  };
+
+  this.update = function () {
+    if (this.total === this.tail.length) {
+      for (let i = 0; i < this.tail.length - 1; i++) {
+        this.tail[i] = this.tail[i + 1];
+      }
+    }
+    this.tail[this.total - 1] = createVector(this.x, this.y);
+
+    this.x = this.x + this.xspeed * scl;
+    this.y = this.y + this.yspeed * scl;
+
+    this.x = constrain(this.x, 0, playfield - scl);
+    this.y = constrain(this.y, 0, playfield - scl);
+  };
+  this.show = function () {
+    fill(255);
+    for (let i = 0; i < this.tail.length; i++) {
+      rect(this.tail[i].x, this.tail[i].y, scl, scl);
+    }
+
+    rect(this.x, this.y, scl, scl);
+  };
+}
