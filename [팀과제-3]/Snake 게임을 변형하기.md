@@ -403,7 +403,7 @@ function rabbit(col)
 
 ## 6. 동영상 🎬
 
-[![Video Label](http://img.youtube.com/vi/Lq7Ga9_VhbA/0.jpg)](https://youtu.be/Lq7Ga9_VhbA)
+[![Video Label](http://img.youtube.com/vi/fSurK7z9mNE/0.jpg)](https://youtu.be/fSurK7z9mNE)
 
 
 
