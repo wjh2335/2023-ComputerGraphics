@@ -33,8 +33,7 @@
 
 ## 2.4. 전체 구성도 
 
-<img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/graphics8-3-idea.jpg" width="1260px" height="680px" title="boxTexture1" alt="boxTexture1"></img>
-<img src="https://raw.githubusercontent.com/SeoyeongShin/2023_1Graphics/main/img/result/box_texture_2_result.jpg" width="400px" height="400px" title="idea1" alt="idea1"></img>
+<img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/graphics8-3-idea.jpg" width="1260px" height="680px" title="idea1" alt="idea1"></img>
 <br/>
 
 
@@ -158,8 +157,7 @@
 장애물이 닿으면 게임이 종료 되도록 하는 기능을 추가하는 방법을 제안합니다.
 ```
 <br/>
-<img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/graphics8-3-b.jpg" width="1260px" height="680px" title="idea2" alt="idea2"></img>
-<img src="https://raw.githubusercontent.com/SeoyeongShin/2023_1Graphics/main/img/result/box_texture_2_result.jpg" width="400px" height="400px" title="boxTexture2" alt="boxTexture2"></img>
+<img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/graphics8-3-b.jpg" title="idea2" alt="idea2"></img>
 <br/>
 
 ```
