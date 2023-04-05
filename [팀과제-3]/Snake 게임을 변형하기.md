@@ -33,7 +33,7 @@
 
 ## 2.4. 전체 구성도 
 
-<img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/idea3.PNG" width="1280px" height="520px" title="idea3" alt="idea3"></img>
+<img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/idea3.PNG" width="1280px" height="510px" title="idea3" alt="idea3"></img>
 <br/>
 
 
@@ -161,8 +161,11 @@ d) 와 같이 게임 난이도를 조절하는 기능으로 위 사진과 같이
 <br/>
 
   * d ) 코드 확장 단계 
-  * d ) [링크](https://github.com/wjh2335/2023-ComputerGraphics/blob/main/%5B%ED%8C%80%EA%B3%BC%EC%A0%9C-3%5D/snake6.js)
-<img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/obstaclesVer.PNG" width="450px" height="450px" title="Obs" alt="Obs"></img>
+  
+  * 확장 버전 코드 ) [링크](https://github.com/wjh2335/2023-ComputerGraphics/blob/main/%5B%ED%8C%80%EA%B3%BC%EC%A0%9C-3%5D/snake6.js)
+
+
+<img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/obstaclesVer.PNG" width="400px" height="400px" title="Obs" alt="Obs"></img>
 <br/>
 
 
