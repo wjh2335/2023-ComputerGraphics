@@ -11,7 +11,7 @@
 
 
 ## 2. 프로젝트 계획 🕗 
-
+  * report 
 ## 2.1. 최적화하기
 
   * 시작할 때는 1점인데 죽고 재시작 될 때 0점으로 시작되는 오류 수정하기
@@ -33,7 +33,7 @@
 
 ## 2.4. 전체 구성도 
 
-<img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/graphics8-3-idea.jpg" width="1260px" height="680px" title="idea1" alt="idea1"></img>
+<img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/idea3.PNG" width="1260px" height="680px" title="idea3" alt="idea3"></img>
 <br/>
 
 
@@ -149,18 +149,14 @@
 ### 3.4. 코드 최적화 및 확장
   * 현재 코드를 최적화하거나 확장할 수 있는 방법에 대해 논의한다.
 
-![20](/img/20.png)
+<br/>
+<img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/idea4.PNG" title="idea4" alt="idea4"></img>
+<br/>
+
 ```
 현재 코드에서 더 최적화하거나 확장할 수 있는 방법에 대해 논의 했습니다.
 게임 난이도를 조절하는 기능으로 위 사진과 같이 점수가 올라갈 수록 장애물이 증가하며,
 장애물이 닿으면 게임이 종료 되도록 하는 기능을 추가하는 방법을 제안합니다.
-```
-<br/>
-<img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/graphics8-3-b.jpg" title="idea2" alt="idea2"></img>
-<br/>
-
-```
-To-do
 ```
 
 
