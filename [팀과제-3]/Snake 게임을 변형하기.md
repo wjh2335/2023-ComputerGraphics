@@ -150,7 +150,7 @@
 ### 3.4. 코드 최적화 및 확장
   * 현재 코드를 최적화하거나 확장할 수 있는 방법에 대해 논의한다.
 
-<img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/idea4.PNG" width="1280px" height="690px" title="idea4" alt="idea4"></img>
+<img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/idea4.PNG" width="1280px" height="670px" title="idea4" alt="idea4"></img>
 <br/>
 ```
 현재 최종 결과물의 코드에서 더 최적화하거나 확장할 수 있는 방법에 대해 논의 했습니다.
@@ -172,7 +172,7 @@ d) 와 같이 게임 난이도를 조절하는 기능으로 위 사진과 같이
 <br/>
 
 
-<br/> 
+
 ## 4. 코드 💻 [링크](https://github.com/wjh2335/2023-ComputerGraphics/blob/main/%5B%ED%8C%80%EA%B3%BC%EC%A0%9C-3%5D/snake4.js)
 
 ```js
