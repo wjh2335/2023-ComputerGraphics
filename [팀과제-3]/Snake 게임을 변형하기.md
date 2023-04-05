@@ -150,16 +150,17 @@
 ### 3.4. 코드 최적화 및 확장
   * 현재 코드를 최적화하거나 확장할 수 있는 방법에 대해 논의한다.
 
+<img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/idea4.PNG" width="1280px" height="720px" title="idea4" alt="idea4"></img>
 <br/>
-<img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/idea4.PNG" title="idea4" alt="idea4"></img>
-<br/>
-
 ```
 현재 코드에서 더 최적화하거나 확장할 수 있는 방법에 대해 논의 했습니다.
 게임 난이도를 조절하는 기능으로 위 사진과 같이 점수가 올라갈 수록 장애물이 증가하며,
 장애물이 닿으면 게임이 종료 되도록 하는 기능을 추가하는 방법을 제안합니다.
 ```
-
+<br/>
+  * d) 코드 확장 단계
+<img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/obstaclesVer.PNG" width="300px" height="300px" title="Obs" alt="Obs"></img>
+<br/>
 
 
 ## 4. 코드 💻 [링크](https://github.com/wjh2335/2023-ComputerGraphics/blob/main/%5B%ED%8C%80%EA%B3%BC%EC%A0%9C-3%5D/snake4.js)
