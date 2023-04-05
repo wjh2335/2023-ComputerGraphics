@@ -33,7 +33,7 @@
 
 ## 2.4. 전체 구성도 
 
-<img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/idea3.PNG" width="1260px" height="680px" title="idea3" alt="idea3"></img>
+<img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/idea3.PNG" width="1280px" height="720px" title="idea3" alt="idea3"></img>
 <br/>
 
 
