@@ -1,11 +1,10 @@
 // 23-04-04
-// 장애물 생성 및 위치 등의 오류를 해결한 code
 /*
   snake ver.5 
   1) game over
   2) restart
   3) createObstacle
-  4) obstacle check
+  4) 추후 food & obstacle 생성의 중복 현상 해결이 필요함  
 */
 
 //Delcare Global Variables
@@ -80,7 +79,6 @@ function createObstacle() {
   }
 
   // Check the obstacle isn't appearing inside another obstacle
-  // 장애물 좌표 중복 체크
   for (let i = 0; i < obstacles.length; i++) {
     let pos = obstacles[i];
     let d = dist(obstacle.x, obstacle.y, pos.x, pos.y);
@@ -193,7 +191,7 @@ function Snake() {
         this.total = 0;
         this.score = 0;
         this.tail = [];
-        obstacles = [];  // 벽에 부딪힐 때 장애물 초기화
+        obstacles = [];  // 벽에 부딪힌 후 게임종료 -> 다시 시작 시 장애물이 1에서 0으로 초기화 되는 문제 해결
         isGameOver = true;
       }
     }
