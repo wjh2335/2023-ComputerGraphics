@@ -33,7 +33,7 @@
 
 ## 2.4. 전체 구성도 
 
-<img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/idea3.PNG" width="1280px" height="720px" title="idea3" alt="idea3"></img>
+<img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/idea3.PNG" width="1280px" height="520px" title="idea3" alt="idea3"></img>
 <br/>
 
 
@@ -153,14 +153,18 @@
 <img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/idea4.PNG" width="1280px" height="720px" title="idea4" alt="idea4"></img>
 <br/>
 ```
-현재 코드에서 더 최적화하거나 확장할 수 있는 방법에 대해 논의 했습니다.
-게임 난이도를 조절하는 기능으로 위 사진과 같이 점수가 올라갈 수록 장애물이 증가하며,
-장애물이 닿으면 게임이 종료 되도록 하는 기능을 추가하는 방법을 제안합니다.
+현재 최종 결과물의 코드에서 더 최적화하거나 확장할 수 있는 방법에 대해 논의 했습니다.
+d) 와 같이 게임 난이도를 조절하는 기능으로 위 사진과 같이 점수가 올라갈수록 장애물이 증가하며,
+장애물이 닿으면 게임이 종료 되도록 하는 기능을 추가하는 방법을 제안합니다. 
+추후 최종 결과물(c)과 확장 단계(d)의 결과물을 하나의 프로젝트로 합친 이후, 여러가지 개선책이 필요합니다. 
 ```
 <br/>
-  * d) 코드 확장 단계
-<img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/obstaclesVer.PNG" width="300px" height="300px" title="Obs" alt="Obs"></img>
+
+  * d ) 코드 확장 단계 
+  * d ) [링크](https://github.com/wjh2335/2023-ComputerGraphics/blob/main/%5B%ED%8C%80%EA%B3%BC%EC%A0%9C-3%5D/snake6.js)
+<img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/obstaclesVer.PNG" width="450px" height="450px" title="Obs" alt="Obs"></img>
 <br/>
+
 
 
 ## 4. 코드 💻 [링크](https://github.com/wjh2335/2023-ComputerGraphics/blob/main/%5B%ED%8C%80%EA%B3%BC%EC%A0%9C-3%5D/snake4.js)
