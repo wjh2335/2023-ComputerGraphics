@@ -162,12 +162,12 @@ d) 와 같이 게임 난이도를 조절하는 기능으로 위 사진과 같이
 
 
 
-##### 3.4.1. d ) 코드 확장 단계 
-  * 장애물을 추가 구현한 코드 
+##### d ) 코드 확장 단계 
+  * 장애물을 추가 구현한 결과물 
   
   * d ) 의 확장 버전 코드 : [링크](https://github.com/wjh2335/2023-ComputerGraphics/blob/main/%5B%ED%8C%80%EA%B3%BC%EC%A0%9C-3%5D/snake6.js)
 
-  * 결과물 
+<br/>
 <img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/obstaclesVer.PNG" width="400px" height="400px" title="Obs" alt="Obs"></img>
 <br/>
 
