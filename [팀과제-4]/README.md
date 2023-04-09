@@ -34,11 +34,6 @@
 ![]()
 
 
-## 6. 동영상 🎬
-
-[![Video Label](http://img.youtube.com/vi/fSurK7z9mNE/0.jpg)](https://youtu.be/fSurK7z9mNE)
-
-
 ## 7. 참고 자료 📂
 
 ### 7.1. 링크
