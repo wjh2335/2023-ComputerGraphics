@@ -50,5 +50,7 @@
 ### 7.1. 링크
 
 [newgraphics 네이버 카페 : 7강 인공지능과 그래픽스, Face-API 얼굴 추출 및 표정인식](https://cafe.naver.com/newgraphics/153)
+
 [Github : justadudewhohacks/face-api.js](https://github.com/justadudewhohacks/face-api.js)
+
 [Youtube : Build Real Time Face Detection With JavaScript](https://www.youtube.com/watch?v=CVClHLwv-4I)
