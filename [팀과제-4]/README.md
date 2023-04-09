@@ -23,20 +23,17 @@
 ```
 
 
-## 3. 프로젝트 수행 과정 📝 
+## 3. 코드 💻 [링크](https://github.com/wjh2335/2023-ComputerGraphics/blob/main/%5B%ED%8C%80%EA%B3%BC%EC%A0%9C-3%5D/snake4.js)
 
 
-## 4. 코드 💻 [링크](https://github.com/wjh2335/2023-ComputerGraphics/blob/main/%5B%ED%8C%80%EA%B3%BC%EC%A0%9C-3%5D/snake4.js)
-
-
-## 5. 실행 결과 🎮
+## 4. 실행 결과 🎮
 
 ![]()
 
 
-## 7. 참고 자료 📂
+## 5. 참고 자료 📂
 
-### 7.1. 링크
+### 5.1. 링크
 
 [newgraphics 네이버 카페 : 7강 인공지능과 그래픽스, Face-API 얼굴 추출 및 표정인식](https://cafe.naver.com/newgraphics/153)
 
