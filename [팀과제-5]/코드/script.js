@@ -1,10 +1,10 @@
 const video = document.getElementById('video');
-const canvas = document.createElement('canvas'); // Äµ¹ö½º ¿ä¼Ò »ı¼º
+const canvas = document.createElement('canvas'); // ìº”ë²„ìŠ¤ ìš”ì†Œ ìƒì„±
 const startBtn = document.getElementById('startBtn');
 const excelBtn = document.getElementById('excelBtn');
 const table = document.querySelector('table tbody');
 const img = document.createElement('img');
-let isCanvasCreated = false; // Äµ¹ö½º ¿ä¼Ò »ı¼º ¿©ºÎ
+let isCanvasCreated = false; // ìº”ë²„ìŠ¤ ìš”ì†Œ ìƒì„± ì—¬ë¶€
 
 Promise.all([
     faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
@@ -26,7 +26,7 @@ startVideo();
 function capture()
 {
     const context = canvas.getContext('2d');
-    context.drawImage(video, 0, 0, canvas.width, canvas.height); // Ä¸Ã³ÇÑ ÀÌ¹ÌÁö ±×¸®±â
+    context.drawImage(video, 0, 0, canvas.width, canvas.height); // ìº¡ì²˜í•œ ì´ë¯¸ì§€ ê·¸ë¦¬ê¸°
 }
 
 function capturePicture()
@@ -38,30 +38,30 @@ function capturePicture()
         isCanvasCreated = true;
     }
 
-    capture(); // Ä¸Ã³ÇÑ ÀÌ¹ÌÁö ±×¸®±â
-    img.src = canvas.toDataURL(); // Äµ¹ö½º¿¡¼­ ±×¸° ÀÌ¹ÌÁö¸¦ img ¿ä¼ÒÀÇ src ¼Ó¼º¿¡ ÇÒ´ç
+    capture(); // ìº¡ì²˜í•œ ì´ë¯¸ì§€ ê·¸ë¦¬ê¸°
+    img.src = canvas.toDataURL(); // ìº”ë²„ìŠ¤ì—ì„œ ê·¸ë¦° ì´ë¯¸ì§€ë¥¼ img ìš”ì†Œì˜ src ì†ì„±ì— í• ë‹¹
 
     const tr = document.createElement('tr');
-    tr.innerHTML = `<td colspan="2"><img src="${img.src}" /></td>`; // tr ¿ä¼Ò »ı¼º ¹× Ãß°¡
+    tr.innerHTML = `<td colspan="2"><img src="${img.src}" /></td>`; // tr ìš”ì†Œ ìƒì„± ë° ì¶”ê°€
 
     const firstRow = table.querySelector('tr:first-child');
-    table.replaceChild(tr, firstRow); // Å×ÀÌºí Ã¹ ¹øÂ° Çà ¾Õ¿¡ »õ·Î¿î Çà Ãß°¡
+    table.replaceChild(tr, firstRow); // í…Œì´ë¸” ì²« ë²ˆì§¸ í–‰ ì•ì— ìƒˆë¡œìš´ í–‰ ì¶”ê°€
 
     const tr1 = table.querySelector(`tr[data-name="Woo"]`);
     const td1 = tr1.querySelector('td:last-child');
-    td1.textContent = 'X';
+    td1.textContent = '';
 
     const tr2 = table.querySelector(`tr[data-name="Su"]`);
     const td2 = tr2.querySelector('td:last-child');
-    td2.textContent = 'X';
+    td2.textContent = '';
 
     const tr3 = table.querySelector(`tr[data-name="Sin"]`);
-    const td3 = tr1.querySelector('td:last-child');
-    td3.textContent = 'X';
+    const td3 = tr3.querySelector('td:last-child');
+    td3.textContent = '';
 
     const tr4 = table.querySelector(`tr[data-name="Captain America"]`);
-    const td4 = tr1.querySelector('td:last-child');
-    td4.textContent = 'X';
+    const td4 = tr4.querySelector('td:last-child');
+    td4.textContent = '';
 }
 
 async function start()
@@ -70,14 +70,14 @@ async function start()
     const faceMatcher = new faceapi.FaceMatcher(labeledFaceDescriptors, 0.6);
 
     attendBtn.addEventListener('click', async () => {
-        // ¾ó±¼ ÀÎ½Ä
+        // ì–¼êµ´ ì¸ì‹
         const detections = await faceapi.detectAllFaces(img).withFaceLandmarks().withFaceDescriptors();
 
-        // ÀÎ½ÄµÈ ¾ó±¼°ú ÀÏÄ¡ÇÏ´Â ¶óº§ Ã£±â
+        // ì¸ì‹ëœ ì–¼êµ´ê³¼ ì¼ì¹˜í•˜ëŠ” ë¼ë²¨ ì°¾ê¸°
         const results = detections.map(d => faceMatcher.findBestMatch(d.descriptor));
         const labels = results.map(r => r.label);
 
-        // ÀÏÄ¡ÇÏ´Â ¶óº§ÀÌ ÀÖ´Â °æ¿ì
+        // ì¼ì¹˜í•˜ëŠ” ë¼ë²¨ì´ ìˆëŠ” ê²½ìš°
         if (labels.length > 0) {
             for (let i = 0; i < labels.length; i++) {
                 const label = labels[i];
@@ -87,6 +87,24 @@ async function start()
                 const td = tr.querySelector('td:last-child');
                 td.textContent = 'O';
             }
+        }
+        else
+        {
+            const tr1 = table.querySelector(`tr[data-name="Woo"]`);
+            const td1 = tr1.querySelector('td:last-child');
+            td1.textContent = 'X';
+
+            const tr2 = table.querySelector(`tr[data-name="Su"]`);
+            const td2 = tr2.querySelector('td:last-child');
+            td2.textContent = 'X';
+
+            const tr3 = table.querySelector(`tr[data-name="Sin"]`);
+            const td3 = tr3.querySelector('td:last-child');
+            td3.textContent = 'X';
+
+            const tr4 = table.querySelector(`tr[data-name="Captain America"]`);
+            const td4 = tr4.querySelector('td:last-child');
+            td4.textContent = 'X';
         }
     });
 }
@@ -111,16 +129,16 @@ function loadLabeledImages()
 
 function createExcel()
 {
-    // ¿¢¼¿ ÆÄÀÏ »ı¼º
+    // ì—‘ì…€ íŒŒì¼ ìƒì„±
     const workbook = XLSX.utils.book_new();
 
-    // ½ÃÆ® »ı¼º
+    // ì‹œíŠ¸ ìƒì„±
     const sheet = XLSX.utils.table_to_sheet(table);
 
-    // ½ÃÆ®¸¦ ¿öÅ©ºÏ¿¡ Ãß°¡
+    // ì‹œíŠ¸ë¥¼ ì›Œí¬ë¶ì— ì¶”ê°€
     XLSX.utils.book_append_sheet(workbook, sheet, 'Attendance');
 
-    // ¿¢¼¿ ÆÄÀÏ ´Ù¿î·Îµå
+    // ì—‘ì…€ íŒŒì¼ ë‹¤ìš´ë¡œë“œ
     XLSX.writeFile(workbook, 'attendance.xlsx');
 }
 
