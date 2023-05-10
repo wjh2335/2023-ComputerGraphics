@@ -77,25 +77,28 @@ async function start()
         const results = detections.map(d => faceMatcher.findBestMatch(d.descriptor));
         const labels = results.map(r => r.label);
 
-        // 일치하는 라벨이 있는 경우
-        if (labels.length > 0) {
-            const tr1 = table.querySelector(`tr[data-name="Woo"]`);
-            const td1 = tr1.querySelector('td:last-child');
-            td1.textContent = 'X';
-
-            const tr2 = table.querySelector(`tr[data-name="Su"]`);
-            const td2 = tr2.querySelector('td:last-child');
-            td2.textContent = 'X';
-
-            const tr3 = table.querySelector(`tr[data-name="Sin"]`);
-            const td3 = tr3.querySelector('td:last-child');
-            td3.textContent = 'X';
-
-            const tr4 = table.querySelector(`tr[data-name="Captain America"]`);
-            const td4 = tr4.querySelector('td:last-child');
-            td4.textContent = 'X';
+        const tr1 = table.querySelector(`tr[data-name="Woo"]`);
+        const td1 = tr1.querySelector('td:last-child');
+        td1.textContent = 'X';
+        
+        const tr2 = table.querySelector(`tr[data-name="Su"]`);
+        const td2 = tr2.querySelector('td:last-child');
+        td2.textContent = 'X';
+        
+        const tr3 = table.querySelector(`tr[data-name="Sin"]`);
+        const td3 = tr3.querySelector('td:last-child');
+        td3.textContent = 'X';
+        
+        const tr4 = table.querySelector(`tr[data-name="Captain America"]`);
+        const td4 = tr4.querySelector('td:last-child');
+        td4.textContent = 'X';
             
-            for (let i = 0; i < labels.length; i++) {
+        
+        // 일치하는 라벨이 있는 경우
+        if (labels.length > 0)
+        {
+            for (let i = 0; i < labels.length; i++)
+            {
                 const label = labels[i];
                 if (label == "unknown") continue;
 
@@ -103,24 +106,6 @@ async function start()
                 const td = tr.querySelector('td:last-child');
                 td.textContent = 'O';
             }
-        }
-        else
-        {
-            const tr1 = table.querySelector(`tr[data-name="Woo"]`);
-            const td1 = tr1.querySelector('td:last-child');
-            td1.textContent = 'X';
-
-            const tr2 = table.querySelector(`tr[data-name="Su"]`);
-            const td2 = tr2.querySelector('td:last-child');
-            td2.textContent = 'X';
-
-            const tr3 = table.querySelector(`tr[data-name="Sin"]`);
-            const td3 = tr3.querySelector('td:last-child');
-            td3.textContent = 'X';
-
-            const tr4 = table.querySelector(`tr[data-name="Captain America"]`);
-            const td4 = tr4.querySelector('td:last-child');
-            td4.textContent = 'X';
         }
     });
 }
