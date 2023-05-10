@@ -85,6 +85,8 @@ function loadLabeledImages() // 인물 학습
             for (let i = 1; i <= 5; i++) // 5장의 사진 학습
             {
                 const img = await faceapi.fetchImage(`https://raw.githubusercontent.com/wjh2335/test5/main/labeled_images/${label}/${i}.jpg`)
+                /* 라이브 서버에서는 일반적으로 폴더 내부의 파일에 직접 접근할 수 없습니다.
+                따라서 원격 서버에 있는 이미지를 가져오는 방법을 사용해야 합니다. */
                 const detections = await faceapi.detectSingleFace(img).withFaceLandmarks().withFaceDescriptor()
                 descriptions.push(detections.descriptor)
             }
