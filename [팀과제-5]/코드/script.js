@@ -107,7 +107,7 @@ function createExcel() {
     const td2 = tr2.querySelector('td:last-child');
     td2.textContent = '';
 
-    const tr3 = table.querySelector(`tr[data-name="Sin"]`);
+    const tr3 = table.querySelector(`tr[data-name="Shin"]`);
     const td3 = tr3.querySelector('td:last-child');
     td3.textContent = '';
 
