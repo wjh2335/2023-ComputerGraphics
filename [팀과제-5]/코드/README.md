@@ -3,7 +3,7 @@
 2. 압축폴더 다운 & 압축풀기 후 Web Server 폴더 지정
 3. http://127.0.0.1:8887 (설정한 포트번호로) 접속
 
-# 프로그램 시연 및 실행 결과
+# 시스템 시연 및 실행 결과
 ### 1. 얼굴 인식 출석 시스템 접속 
 <br>
 <img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/%EC%96%BC%EA%B5%B4%EC%9D%B8%EC%8B%9D%EC%B6%9C%EC%84%9D%EC%8B%9C%EC%8A%A4%ED%85%9Cgui(1).jpg"></img>
