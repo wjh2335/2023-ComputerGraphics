@@ -4,10 +4,13 @@
 3. http://127.0.0.1:8887 (설정한 포트번호로) 접속
 
 # 프로그램 시연 및 실행 결과
+### 1. 얼굴 인식 출석 시스템 접속 
 <img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/%EC%96%BC%EA%B5%B4%EC%9D%B8%EC%8B%9D%EC%B6%9C%EC%84%9D%EC%8B%9C%EC%8A%A4%ED%85%9Cgui(1).jpg"></img>
 <br>
+### 2. 학생 사진 캡처, 출석 체크
 <img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/%EC%96%BC%EA%B5%B4%EC%9D%B8%EC%8B%9D%EC%B6%9C%EC%84%9D%EC%8B%9C%EC%8A%A4%ED%85%9Cgui(2).jpg"></img>
 <br>
+### 3. 출석 정보 엑셀 추출
 <img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/%EC%96%BC%EA%B5%B4%EC%9D%B8%EC%8B%9D%EC%B6%9C%EC%84%9D%EC%8B%9C%EC%8A%A4%ED%85%9Cgui(3).jpg"></img>
 <br>
 
