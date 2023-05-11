@@ -43,6 +43,8 @@
 
 ---
 
-![25](/img/25.png)
+<br>
+<img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/result_ex.jpg"></img>
+<br>
 
 **▲ 엑셀 파일**
