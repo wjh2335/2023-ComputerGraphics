@@ -5,8 +5,11 @@
 
 # 프로그램 시연 및 실행 결과
 <img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/%EC%96%BC%EA%B5%B4%EC%9D%B8%EC%8B%9D%EC%B6%9C%EC%84%9D%EC%8B%9C%EC%8A%A4%ED%85%9Cgui(1).jpg"></img>
+<br>
 <img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/%EC%96%BC%EA%B5%B4%EC%9D%B8%EC%8B%9D%EC%B6%9C%EC%84%9D%EC%8B%9C%EC%8A%A4%ED%85%9Cgui(2).jpg"></img>
+<br>
 <img src="https://raw.githubusercontent.com/wjh2335/2023-ComputerGraphics/main/img/%EC%96%BC%EA%B5%B4%EC%9D%B8%EC%8B%9D%EC%B6%9C%EC%84%9D%EC%8B%9C%EC%8A%A4%ED%85%9Cgui(3).jpg"></img>
+<br>
 
 **▲ 웹 페이지**
 
