@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="face-api.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <style>
+        #output {
+            width: 900px;
+        }
+
+        .face-canvas {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .image-container {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="file" accept="image/*" onchange="loadImage(event)"><br>
+        <div class="image-container">
+            <img id="output">
+            <div id="facesContainer"></div>
+        </div>
+    </div>
+
+    <script>
+        async function initializeFaceAPI() {
+            await Promise.all([
+                faceapi.nets.ssdMobilenetv1.loadFromUri('models'),
+                faceapi.nets.faceLandmark68Net.loadFromUri('models'),
+            ]);
+        }
+
+        async function loadImage(event) {
+            const image = document.getElementById('output');
+            image.src = URL.createObjectURL(event.target.files[0]);
+            image.onload = async function () {
+                await detectFaces(image);
+            };
+        }
+
+        async function detectFaces(image) {
+            await initializeFaceAPI();
+
+            const container = document.getElementById('facesContainer');
+            container.innerHTML = '';
+
+            const detections = await faceapi.detectAllFaces(image).withFaceLandmarks();
+            const faceCanvases = detections.map(detection => {
+                const { x, y, width, height } = detection.detection.box;
+                const faceCanvas = faceapi.createCanvasFromMedia(image);
+                const ctx = faceCanvas.getContext('2d');
+
+                faceCanvas.width = 200;//width;
+                faceCanvas.height = 200;//height;
+                ctx.drawImage(image, x, y, width, height, 0, 0, faceCanvas.width, faceCanvas.height);
+                container.appendChild(faceCanvas);
+                return faceCanvas;
+            });
+        }
+    </script>
+</body>
+</html>
